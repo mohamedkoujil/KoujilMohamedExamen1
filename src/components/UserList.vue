@@ -13,8 +13,8 @@ const filteredUsers = computed(() => {
 
 watch(
   () => filter,
-  () => {
-    console.log('Filtre canviat:', filter)
+  (newVal, oldVal) => {
+    console.log('Filtre canviat:', oldVal, '=>', newVal)
   }
 )
 </script>
